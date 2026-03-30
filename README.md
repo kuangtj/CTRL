@@ -150,7 +150,7 @@ python finetune_first_stage.py --device {your_device}
 ```bash
 python finetune_second_stage.py --device {your_device}
 ```
-
+##### You can download the pretrained CKPT file from the following link: Download Link(https://drive.google.com/file/d/1TKQdkVDn-hMWaudDr1HLCB4BZb2zXc0_/view?usp=drive_link)
 ---
 
 More information will be provided soon!!!
