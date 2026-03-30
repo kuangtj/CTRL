@@ -54,7 +54,7 @@ pip install PyTDC transformers accelerate dgl biopython numpy pandas scikit-lear
 
 ## Data Preprocessing
 
-### You can download the pretrained/finetuned data file from the [Download Link](https://drive.google.com/file/d/1GObdPgYx83BtAFWQ65d7l45DV1smyqWg/view?usp=sharing)
+#### You can download the pretrained/finetuned data file from the [Download Link](https://drive.google.com/file/d/1GObdPgYx83BtAFWQ65d7l45DV1smyqWg/view?usp=sharing)
 
 
 ### For Pretraining:
@@ -154,7 +154,7 @@ python finetune_first_stage.py --device {your_device}
 python finetune_second_stage.py --device {your_device}
 ```
 
-### You can download the pretrained CKPT file from the [Download Link](https://drive.google.com/file/d/1TKQdkVDn-hMWaudDr1HLCB4BZb2zXc0_/view?usp=drive_link)
+#### You can download the pretrained CKPT file from the [Download Link](https://drive.google.com/file/d/1TKQdkVDn-hMWaudDr1HLCB4BZb2zXc0_/view?usp=drive_link)
 ---
 
 More information will be provided soon!!!
