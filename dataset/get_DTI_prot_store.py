@@ -22,14 +22,9 @@ def get_dataset(task_id_want, chunk_idx, device):
     file_path = f'./data/DTI_data_from_TDC/{task_id_want}_prot_data.json'
 
     with open(file_path, 'r', encoding='utf-8') as file:
-        prot_list_all = json.load(file)
-
-    slip_prot_len = int(len(prot_list_all)/5) + 1 
-    prot_list = prot_list_all[chunk_idx * slip_prot_len: (chunk_idx + 1) * slip_prot_len]
-    print("1")
-
+        prot_list = json.load(file)
+    
     for idx in range(len(prot_list)):
-        print(idx)
         try:
             prot_name = prot_list[idx][0]
             prot_seq = prot_list[idx][1]
