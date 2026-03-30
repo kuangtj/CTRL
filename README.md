@@ -1,7 +1,7 @@
 
 # CTRL Code Repository
 
-This repository contains the official codebase and implementation for the CTRL research paper.
+This repository contains the official codebase and implementation for the "Cheminformatics task-conditional representation learning framework for molecular tasks" research paper.
 
 ## Requirements
 
