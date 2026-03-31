@@ -46,6 +46,7 @@ def get_dataset(dataset_name, chunk_idx):
             mol_tmp = Chem.MolFromSmiles(smiles_list[idx])
             if mol_tmp.GetNumHeavyAtoms() > 200:
                 print(f"The mol is too large(>200): {smiles_list[idx]}")
+                continue
             mol_smiles = Chem.MolToSmiles(mol_tmp)
             data_sdf = f"./data_store/pretrain_data_sdf/{dataset_name}_{mol_smiles.replace('/', '_')[:240]}.sdf"
             data_pt = f"./data_store/pretrain_data_pt/{dataset_name}_{mol_smiles.replace('/', '_')[:240]}.pt"
