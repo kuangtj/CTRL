@@ -119,6 +119,7 @@ def get_dataset(task_id_want):
             mol_tmp = Chem.MolFromSmiles(train_smiles_list[idx])
             if mol_tmp.GetNumHeavyAtoms() > 200:
                 print(f"The mol is too large(>200): {train_smiles_list[idx]}")
+                continue
             mol_smiles = Chem.MolToSmiles(mol_tmp)
             data_item = smiles_preporcess(mol_smiles, f"./data_store/{task_id}_mol_sdf/mol_{mol_smiles.replace('/', '_')[:245]}.sdf")
             data_item['label'] = torch.tensor(train_label_list[idx])
@@ -148,6 +149,7 @@ def get_dataset(task_id_want):
             mol_tmp = Chem.MolFromSmiles(valid_smiles_list[idx])
             if mol_tmp.GetNumHeavyAtoms() > 200:
                 print(f"The mol is too large(>200): {valid_smiles_list[idx]}")
+                continue
             mol_smiles = Chem.MolToSmiles(mol_tmp)
             data_item = smiles_preporcess(mol_smiles, f"./data_store/{task_id}_mol_sdf/mol_{mol_smiles.replace('/', '_')[:245]}.sdf")
             data_item['label'] = torch.tensor(valid_label_list[idx])
@@ -176,6 +178,7 @@ def get_dataset(task_id_want):
             mol_tmp = Chem.MolFromSmiles(test_smiles_list[idx])
             if mol_tmp.GetNumHeavyAtoms() > 200:
                 print(f"The mol is too large(>200): {test_smiles_list[idx]}")
+                continue
             mol_smiles = Chem.MolToSmiles(mol_tmp)
             data_item = smiles_preporcess(mol_smiles, f"./data_store/{task_id}_mol_sdf/mol_{mol_smiles.replace('/', '_')[:245]}.sdf")
             data_item['label'] = torch.tensor(test_label_list[idx])
