@@ -30,6 +30,7 @@ def get_dataset(task_id_want):
             mol_tmp = Chem.MolFromSmiles(smiles_list[idx])
             if mol_tmp.GetNumAtoms() > 200:
                 print(f"The mol is too large(>200): {smiles_list[idx]}")
+                continue
             mol_smiles = Chem.MolToSmiles(mol_tmp)
             data_item = smiles_preporcess(mol_smiles, f"./data_store/RYP_mol_sdf/mol_{mol_smiles.replace('/', '_')[:122] + mol_smiles.replace('/', '_')[-122:]}.sdf")
             torch.save(data_item, f"./data_store/RYP_mol_pt/mol_{mol_smiles.replace('/', '_')[:122] + mol_smiles.replace('/', '_')[-122:]}.pt")
