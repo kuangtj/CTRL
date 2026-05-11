@@ -154,6 +154,12 @@ python finetune_first_stage.py --device {your_device}
 python finetune_second_stage.py --device {your_device}
 ```
 
+## Inference
+
+```bash
+python inference.py --device {your_device} --task {task_id}
+```
+
 #### You can download the pretrained CKPT file from the [Download Link](https://drive.google.com/file/d/1TKQdkVDn-hMWaudDr1HLCB4BZb2zXc0_/view?usp=drive_link)
 ---
 
